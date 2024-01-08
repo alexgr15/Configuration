@@ -42,8 +42,16 @@ button {
     background-color: #1b8a94;
 }
 
+.scanWifi{
+    background-color: #1b8a94;
+}
+
 .offButton{
     background-color: #5f6c6d;
+}
+
+.activWifi{
+    background-color: #24af37;
 }
 
 .connectButton{
