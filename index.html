@@ -20,28 +20,29 @@
 <body>
     <div class="topnav">
         <h1>Configuracion</h1>
+        <p>
+            <button id="connectBleButton" class="connectButton"> Connect to BLE Device</button>
+            <button id="disconnectBleButton" class="disconnectButton"> Disconnect BLE Device</button>
+        </p>
+        <p class="gray-label">BLE state: <strong><span id="bleState"
+                    style="color:#d13a30;">Disconnected</span></strong></p>
     </div>
     <div class="content">
-        <div class="card-grid">
+        <!--<div class="card-grid">
             <div class="card">
-                <p>
-                    <button id="connectBleButton" class="connectButton"> Connect to BLE Device</button>
-                    <button id="disconnectBleButton" class="disconnectButton"> Disconnect BLE Device</button>
-                </p>
-                <p class="gray-label">BLE state: <strong><span id="bleState"
-                            style="color:#d13a30;">Disconnected</span></strong></p>
+                
             </div>
-        </div>
-        <div class="card">
-            <h2>Control GPIO 2</h2>
-            <button id="onButton" class="onButton">ON</button>
-            <button id="offButton" class="offButton">OFF</button>
-        </div>
+        </div>-->
         <div class="card">
             <h2>Configuracion Wifi</h2>
             <select name="SSID" id="SSID" value="SSID"></select>
             <input type="password" name="Pass" placeholder="Contraseña">
             <input type="submit" value="Guardar">
+        </div>
+        <div class="card">
+            <h2>Control GPIO 2</h2>
+            <button id="onButton" class="onButton">ON</button>
+            <button id="offButton" class="offButton">OFF</button>
         </div>
     </div>
 </body>
