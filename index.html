@@ -41,11 +41,33 @@
             <input type="password" name="Pass" placeholder="Contraseña">
             <input type="submit" value="Conectar">
         </div>
-        <!--<div class="card">
-            <h2>Control GPIO 2</h2>
-            <button id="onButton" class="onButton">ON</button>
-            <button id="offButton" class="offButton">OFF</button>
-        </div>-->
+        <div class="card">
+            <h2>Frecencia de Sensado</h2>
+            <h1>Frecuencia</h1>
+            <select name="Frecuencia" id="Frecuencia" value="Frecuencia">
+                <option value="1">500</option>
+                <option value="2">1</option>
+                <option value="3">1.5</option>
+            </select>
+           <!-- <button id="onButton" class="onButton">ON</button>
+            <button id="offButton" class="offButton">OFF</button>-->
+        </div>
+        <div class="card">
+              <h2>Modo de control</h2>
+              <select name="ModeControl" id="ModeControl" value="ModeControl">
+                <option value="1">Lazo Abierto</option>
+                <option value="2">PID</option>
+                <option value="3">IA</option>
+            </select>
+        </div>
+        <div class="card">
+              <h2>Data logg</h2>  
+              <select name="DataLogg" id="DataLogg" value="DataLogg">
+                <option value="1">Google Sheet</option>
+                <option value="2">Excel 365</option>
+                <option value="3">FireBase</option>
+            </select>
+        </div>
     </div>
 </body>
 <script>
@@ -58,6 +80,13 @@
     const latestValueSent = document.getElementById('valueSent');
     const bleStateContainer = document.getElementById('bleState');
     const timestampContainer = document.getElementById('timestamp');
+    const wifiButton = document.getElementById('wifiButton');
+    const wifiContainer = document.getElementById('wifiContainer');
+    const wifiList = document.getElementById('wifiList');
+    const ssid = document.getElementById('ssid');
+    const pass = document.getElementById('pass');
+    const connectWifi = document.getElementById('connectWifi');
+    const wifiStatus = document.getElementById('wifiStatus');
 
     //Define BLE Device Specs
     var deviceName = 'ESP32';
@@ -214,6 +243,10 @@
 
         var datetime = day + "/" + month + "/" + year + " at " + hours + ":" + minutes + ":" + seconds;
         return datetime;
+    }
+
+    function getWifilist(){
+        
     }
 
 
